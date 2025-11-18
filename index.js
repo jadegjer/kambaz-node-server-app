@@ -14,12 +14,13 @@ import EnrollmentRoutes from "./Kambaz/Enrollments/routes.js";
 const app = express();
 
 // Configure CORS with credentials support
-app.use(
-  cors({
-    credentials: true,
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
-  })
-);
+app.use(cors({
+  origin: [
+    'https://your-production-domain.vercel.app',  // Your main Vercel domain
+    'http://localhost:3000'  // For local development
+  ],
+  credentials: true
+}));
 
 // Configure session
 const sessionOptions = {
