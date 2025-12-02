@@ -16,7 +16,7 @@ const app = express();
 // Configure CORS with credentials support
 app.use(cors({
   origin: [
-    'https://your-production-domain.vercel.app',  // Your main Vercel domain
+    'https://kambaz-next-js-lake.vercel.app',  // Your main Vercel domain
     'http://localhost:3000'  // For local development
   ],
   credentials: true
